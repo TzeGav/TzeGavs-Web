@@ -1,0 +1,473 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | Gaven's Webpage</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: hwb(0 5% 95%);
+            color: #333;
+            font-family: Georgia, serif;
+        }
+
+        /* NAVIGATION */
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 20px;
+            padding: 18px 25px;
+            background: #fdfcf9;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px grey;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 19px;
+            font-weight: bold;
+        }
+
+        .html5 {
+            width: 35px;
+            height: 40px;
+        }
+
+     .menu {
+            display: flex;
+            gap: 30px;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: #333;
+            padding: 10px 15px;
+            border-radius: 20px;
+            transition: 0.3s;
+        }
+
+        .menu a:hover {
+            background: #222;
+            color: white;
+        }
+
+        .menu a:active {
+            background: rgb(174, 174, 174);
+            color: #222;
+            text-decoration: underline;
+            text-underline-offset: 5px;
+        }
+
+
+       .inspiration-gallery {
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      gap: 25px;
+      margin: 30px auto 10px;
+      flex-wrap: wrap;
+  }
+  
+  .character-card {
+      flex: 1;
+      max-width: 280px;
+      min-width: 200px;
+      padding: 12px;
+      background: #f4f1eb;
+      border-radius: 16px;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.10);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .character-card:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.16);
+  }
+  
+  .character-card img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 11px;
+      display: block;
+  }
+  
+  .character-card h3 {
+      margin: 14px 0 5px;
+      font-family: Georgia, serif;
+      color: #252525;
+  }
+  
+  .character-card p {
+      margin: 0 0 5px;
+      font-size: 13px;
+      color: #777;
+      text-align: center;
+  }
+
+        /* Main About Container */
+        .about-container {
+            max-width: 900px;
+            margin: auto;
+            padding: 35px;
+            background: #fdfcf9;
+            border-radius: 18px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+            animation: fadeIn 1s ease;
+        }
+
+        .about-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .about-header h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .about-header p {
+            color: #666;
+            font-style: italic;
+        }
+
+        /* Personal Image */
+        .gav {
+            display: block;
+            width: 100%;
+            max-width: 400px;
+            height: 340px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin: 0 auto 30px;
+            box-shadow: 0 5px 12px rgba(0,0,0,0.15);
+        }
+
+        /* Text Sections */
+        .about-section {
+            margin-bottom: 25px;
+            line-height: 1.8;
+        }
+
+        .about-section h2 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 8px;
+        }
+
+        .about-section p {
+            font-size: 16px;
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+
+        .about-section a {
+            color: #526b88;
+            font-weight: bold;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .about-section a:hover {
+            color: #222;
+            text-decoration: underline;
+        }
+
+        .closing {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f0efeb;
+            border-radius: 12px;
+            text-align: center;
+            font-style: italic;
+        }
+
+        footer {
+            color: #ddd;
+            text-align: center;
+            margin-top: 25px;
+            font-size: 13px;
+        }
+
+            hr {
+            border: none;
+            border-top: 2px solid #ddd;
+            margin: 20px;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(12px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Mobile Layout */
+        @media (max-width: 650px) {
+            body {
+                padding: 12px;
+            }
+
+               .navbar {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .menu {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 8px;
+            }
+
+            .about-container {
+                padding: 22px;
+            }
+
+            .about-header h1 {
+                font-size: 27px;
+            }
+
+            .gav {
+                height: 280px;
+            }
+
+            .about-section p {
+                text-align: left;
+            }
+  
+  @media (max-width: 650px) {
+      .inspiration-gallery {
+          gap: 18px;
+      }
+  
+      .character-card {
+          max-width: 100%;
+      }
+  
+      .character-card img {
+          height: 260px;
+      }
+  }
+          }
+
+        @media (max-width: 650px) {
+
+            .navbar {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .menu {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 8px;
+            }
+
+            .intro {
+                padding: 22px;
+            }
+
+            .intro h2 {
+                font-size: 20px;
+            }
+
+            .container1 {
+                flex-direction: row;
+                margin: 25px 20px;
+                gap: 20px;
+            }
+
+            .intro3 {
+                min-width: 100%;
+                padding: 25px;
+            }
+
+            .paragraph {
+                font-size: 16px;
+            }
+
+            .picture {
+                max-width: 100%;
+                height: auto;
+                max-height: 230px;
+            }
+
+                  }
+
+    </style>  
+              
+</head>
+
+<body>
+
+  <div class="menu-pos">
+
+    <nav class="navbar">
+
+        <div class="logo">
+
+            <svg class="html5"
+                 viewBox="0 0 384 512"
+                 xmlns="http://www.w3.org/2000/svg">
+
+                <path fill="#E44D26"
+                    d="M0 0h384l-35 400-157 44-157-44z"/>
+
+                <path fill="#F16529"
+                    d="M192 32h157l-30 340-127 35z"/>
+
+                <path fill="#EBEBEB"
+                    d="M78 90h228l-7 45H128l5 46h162l-17 169-86 24-86-24-6-80h45l3 45 44 12 44-12 8-89H91z"/>
+
+            </svg>
+
+            <span>Gaven's Webpage</span>
+
+        </div>
+
+        <div class="menu">
+
+            <a href="index.html#container1">Home</a>
+            <a href="about.html" class="active">About Me</a>
+            <a href="contact.html">Contact Me</a>
+
+        </div>
+
+    </nav>
+
+    <hr>
+
+</div>
+
+    <!-- About Me Content -->
+    <main class="about-container">
+
+        <div class="about-header">
+            <h1>About Me</h1>
+            <p>A little introduction to who I am.</p>
+        </div>
+
+        <!-- Your Original Image -->
+        <img src="gav1.jpg" alt="A picture of Gaven" class="gav">
+
+        <section class="about-section">
+            <h2>Who Am I?</h2>
+
+            <p>
+                Hello! I'm <b>Gaven Rossdale Valles</b>, but you can simply
+                call me <i>Gav</i>. I could say that I feel like I can do
+                everything, yet sometimes I still don't know which
+                direction to take or where to begin.
+            </p>
+
+            <p>
+                I have <b>one</b> older brother, and for some reason,
+                he can be quite arrogant toward me. But honestly,
+                I feel like showing off to your little brother is
+                one of the best things an older brother can do.
+            </p>
+        </section>
+
+        <section class="about-section">
+            <h2>My Journey</h2>
+
+            <p>
+                I've been working on this website for quite a long
+                time. Unfortunately, I haven't always been consistent
+                with it because of schoolwork and other personal
+                reasons.
+            </p>
+
+            <p>
+                There were times when I couldn't give this project
+                the attention it deserved. Still, I'm glad that I
+                continued working on it, even if progress was slow.
+            </p>
+        </section>
+
+     <div class="about-section">
+
+    <h2>My Inspiration</h2>
+
+    <p>
+        I have a very big dream. I wish to be just as amazing as
+        <a href="https://mushokutensei.fandom.com/wiki/Rudeus_Greyrat"
+           target="_blank">Rudeus Greyrat</a>
+        and
+        <a href="https://rezero.fandom.com/wiki/Natsuki_Subaru"
+           target="_blank">Subaru Natsuki</a>.
+        Even though I have my own goals and personal identity,
+        I want to become someone as amazing and inspirational as them.
+    </p>
+
+    <div class="inspiration-gallery">
+
+        <div class="character-card">
+            <img src="rudeus1.jpg" alt="Rudeus Greyrat">
+            <h3>Rudeus Greyrat</h3>
+            <p>Mushoku Tensei</p>
+        </div>
+
+        <div class="character-card">
+            <img src="subaru1.jpg" alt="Subaru Natsuki">
+            <h3>Subaru Natsuki</h3>
+            <p>Re:Zero</p>
+        </div>
+
+    </div>
+
+</div>
+
+        <section class="about-section">
+            <h2>Looking Forward</h2>
+
+            <p>
+                I could say that I'm not particularly proud of what
+                I'm doing at the moment because I know I've put in
+                less effort than I could have. Nonetheless, I'm
+                thankful that things are almost over.
+            </p>
+
+            <p>
+                I can finally sit down, relax, and reminisce about
+                the past while imagining what the future might hold.
+                There's still so much I want to experience, learn,
+                and accomplish.
+            </p>
+        </section>
+
+        <div class="closing">
+            "The past is something to remember, while the future
+            is something worth looking forward to."
+        </div>
+
+    </main>
+
+    <footer>
+        <p>Gaven's Webpage | About Me</p>
+    </footer>
+
+</body>
+</html>
